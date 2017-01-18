@@ -1,0 +1,17 @@
+<h2>main.html mushroom time</h2>
+
+<input type="text" ng-model="searchList">
+<label>Poisonous</label><input ng-click="poison()" type="radio" name="poison">
+<label>Non-Poisonous</label>
+<input ng-click="noPoison()" type="radio" name="non-poison">
+<ul>
+  <div ng-repeat="item in data | filter: searchList">
+       <div ng-repeat="(key, value) in item">
+        {{key}} : <br>
+         Edible? {{value.edible}} <br>
+          Brief Mushroom Bio: {{value.description}}</div>
+
+   </div>
+
+
+</ul>
