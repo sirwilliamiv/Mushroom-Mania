@@ -6,8 +6,12 @@
 <div class="inputs">
   <input type="text" ng-model="List">
 
-   <label> Edible</label><input ng-model="searchList" ng-value="{{value.edible = true}}" value="edible" type="radio" name="non-poison">
-    <label>Poisonous</label><input ng-model="searchList" ng-value="{{value.edible = false}}" value="poisonous" type="radio" name="non-poison">
+   <label> Edible</label>
+   <input ng-model="searchList" ng-value="{{value.edible = true}}" value="edible" type="radio" name="non-poison">
+    <label>Poisonous</label>
+    <input ng-model="searchList" ng-value="{{value.edible = false}}" value="poisonous" type="radio" name="poison">
+    <label>All Mushrooms</label>
+    <input ng-model="searchList" ng-value="{{key}}" type="radio" name="all mushrooms" value="mushrooms">
 </div>
 
 
