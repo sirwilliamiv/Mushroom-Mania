@@ -6,12 +6,14 @@
 <div class="inputs">
   <input type="text" ng-model="List">
 
-   <label> Edible</label>
+
+    <label>All Mushrooms</label>
+    <input ng-model="searchList" ng-value="{{key}}" type="radio" name="all mushrooms" value="mushrooms" checked>
+    <label> Edible</label>
    <input ng-model="searchList" ng-value="{{value.edible = true}}" value="edible" type="radio" name="non-poison">
     <label>Poisonous</label>
     <input ng-model="searchList" ng-value="{{value.edible = false}}" value="poisonous" type="radio" name="poison">
-    <label>All Mushrooms</label>
-    <input ng-model="searchList" ng-value="{{key}}" type="radio" name="all mushrooms" value="mushrooms">
+
 </div>
 
 
@@ -23,7 +25,7 @@
 
         <div class="name">{{key}} : </div>
         <div class="eat">Edible? {{value.edible}}</div>
-        <div class="about">Brief Mushroom Bio: {{value.description}}</div>
+        <div class="about">About: <br> {{value.description}}</div>
       </div>
 
    </div>
