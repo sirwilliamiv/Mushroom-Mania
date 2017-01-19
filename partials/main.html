@@ -1,0 +1,27 @@
+<h1>Mushroom Mania</h1>
+
+
+
+
+<div class="inputs">
+  <input type="text" ng-model="List">
+    Edible<input ng-model="searchList" ng-value="{{value.edible = true}}" value="edible" type="radio" name="non-poison">
+    Poisonous<input ng-model="searchList" ng-value="{{value.edible = false}}" value="poisonous" type="radio" name="non-poison">
+</div>
+
+
+
+<ul>
+  <div ng-repeat="item in data | filter: searchList | filter: List ">
+      <div ng-repeat="(key, value) in item">
+
+
+        <div class="name">{{key}} : </div>
+        <div class="eat">Edible? {{value.edible}}</div>
+        <div class="about">Brief Mushroom Bio: {{value.description}}</div>
+      </div>
+
+   </div>
+
+
+</ul>
