@@ -13,16 +13,16 @@ app.config(($routeProvider, $locationProvider) => {
 })
 
 
-app.controller('MainCtrl', function($scope,$http) {
+app.controller('MainCtrl', function($scope,$http,$filter) {
   $scope.mush = "lots of mushrooms"
 
-   $http.get(`mushrooms.json`)
+  $http.get(`mushrooms.json`)
        .then((mush) => {
         console.log(mush)
-          $scope.data = mush.data.mushrooms
+    $scope.data = mush.data.mushrooms
 
        })
-    $scope.poison = ()=> {
 
-    }
+
+
 })

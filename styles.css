@@ -1,3 +1,20 @@
 body {
   background-color: lightgrey;
+  text-align: center;
+}
+.name {
+  font-size: 4rem;
+}
+
+.eat {
+  font-size: 2rem;
+}
+
+.about {
+  font-size: 1rem;
+}
+
+.inputs {
+margin-left: 5rem;
+
 }

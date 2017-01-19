@@ -1,15 +1,25 @@
-<h2>main.html mushroom time</h2>
+<h1>Mushroom Mania</h1>
 
-<input type="text" ng-model="searchList">
-<label>Poisonous</label><input ng-click="poison()" type="radio" name="poison">
-<label>Non-Poisonous</label>
-<input ng-click="noPoison()" type="radio" name="non-poison">
+
+
+
+<div class="inputs">
+  <input type="text" ng-model="List">
+    Edible<input ng-model="searchList" ng-value="{{value.edible = true}}" value="edible" type="radio" name="non-poison">
+    Poisonous<input ng-model="searchList" ng-value="{{value.edible = false}}" value="poisonous" type="radio" name="non-poison">
+</div>
+
+
+
 <ul>
-  <div ng-repeat="item in data | filter: searchList">
-       <div ng-repeat="(key, value) in item">
-        {{key}} : <br>
-         Edible? {{value.edible}} <br>
-          Brief Mushroom Bio: {{value.description}}</div>
+  <div ng-repeat="item in data | filter: searchList | filter: List ">
+      <div ng-repeat="(key, value) in item">
+
+
+        <div class="name">{{key}} : </div>
+        <div class="eat">Edible? {{value.edible}}</div>
+        <div class="about">Brief Mushroom Bio: {{value.description}}</div>
+      </div>
 
    </div>
 
